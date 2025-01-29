@@ -17,7 +17,7 @@ export function Home() {
             <h2>Home Sweet Home</h2>
           {/* <AnimalList animals={animalInfos}/> */}
           {/* <SeasonClock/> */}
-          <CountDown toTime={Date.now() + 1000*10}startFrom={10} onDone={()=>{
+          <CountDown toTime={Date.now() + 1000*10} startFrom={10} onDone={()=>{
             console.log('Done!')
             }} />
 
