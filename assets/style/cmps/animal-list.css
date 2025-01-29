@@ -1,0 +1,18 @@
+
+.animal-list{
+  background-color: red;
+  color: white;
+}
+.animal-header{
+  font-size: 1.5rem;
+  padding-block: 1rem;
+}
+table, th, td {
+  font-size: 1rem;
+  text-align: start;
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+th{
+  padding: 1rem;
+}
