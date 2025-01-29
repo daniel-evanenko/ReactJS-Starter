@@ -1,8 +1,9 @@
-const { useState, useEffect } = React
+const { useState, useEffect, useRef } = React
 
 export function SeasonClock() {
     const [date, setDate] = useState(new Date());
     const [isDark, setIsDark] = useState(false);
+    const intervalIdRef = useRef()
     const darkClass = isDark ? 'dark' : '';
 
     function getSeason() {
@@ -29,16 +30,16 @@ export function SeasonClock() {
     }
 
     useEffect(() => {
-        const intervalId = setInterval(() => {
+        intervalIdRef.current = setInterval(() => {
             setDate(new Date());
         }, 1000);
-        return () => clearInterval(intervalId);
+        return () => clearInterval(intervalIdRef.current);
     }, []);
 
     function onToggleDark() {
         setIsDark(isDark => !isDark);
     }
-    
+
     const time = date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
     const month = date.toLocaleString('en-US', { month: 'long' });
     const day = date.toLocaleString('en-US', { weekday: 'long' });
