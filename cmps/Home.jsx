@@ -1,4 +1,5 @@
 import {AnimalList} from "./AnimalList.jsx";
+import { SeasonClock } from "./SeasonClock.jsx";
 
 const { useState, useEffect } = React
 
@@ -13,7 +14,8 @@ export function Home() {
     return (
         <section className="home">
             <h2>Home Sweet Home</h2>
-          <AnimalList animals={animalInfos}/>
+          {/* <AnimalList animals={animalInfos}/> */}
+          <SeasonClock/>
        </section>
     )
 }

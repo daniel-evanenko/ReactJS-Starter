@@ -1,0 +1,12 @@
+.season-clock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+}
+
+.dark{
+    background-color: darkblue;
+    color: white;
+}
