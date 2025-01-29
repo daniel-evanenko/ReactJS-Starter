@@ -6,7 +6,7 @@ export function CountDown({ startFrom, toTime, onDone }) {
         return toTime ? Math.max(0, Math.floor((toTime - now) / 1000)) : startFrom;
     });
 
-    const intervalRef = useRef(null); // ✅ Store interval ID
+    const intervalRef = useRef(null); 
 
     useEffect(() => {
         if (count <= 0) {
@@ -14,8 +14,6 @@ export function CountDown({ startFrom, toTime, onDone }) {
             onDone();
             return;
         }
-
-        // ✅ Create interval only once
         if (!intervalRef.current) {
             intervalRef.current = setInterval(() => {
                 setCount(prev => {
@@ -23,7 +21,7 @@ export function CountDown({ startFrom, toTime, onDone }) {
                     const remaining = toTime ? Math.max(0, Math.floor((toTime - now) / 1000)) : prev - 1;
                     if (remaining <= 0) {
                         clearInterval(intervalRef.current);
-                        intervalRef.current = null; // Prevent multiple clears
+                        intervalRef.current = null; 
                         playSound();
                         onDone();
                         return 0;
@@ -35,9 +33,9 @@ export function CountDown({ startFrom, toTime, onDone }) {
 
         return () => {
             clearInterval(intervalRef.current);
-            intervalRef.current = null; // Clean up on unmount
+            intervalRef.current = null; 
         };
-    }, []); // ✅ Effect runs only once when the component mounts
+    }, []);
 
     function playSound() {
         const audio = new Audio('/assets/sound/alarm.mp3'); 
