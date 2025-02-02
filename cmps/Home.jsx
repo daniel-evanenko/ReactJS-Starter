@@ -1,5 +1,6 @@
 import {AnimalList} from "./AnimalList.jsx";
 import { CountDown } from "./CountDown.jsx";
+import { MouseMonitor } from "./MouseMonitor.jsx";
 import { SeasonClock } from "./SeasonClock.jsx";
 import { WatcherIndex } from "./WatcherIndex.jsx";
 
@@ -21,8 +22,8 @@ export function Home() {
           {/* <CountDown toTime={Date.now() + 1000*10} startFrom={10} onDone={()=>{
             console.log('Done!')
             }} /> */}
-            <WatcherIndex/>
-
+            {/* <WatcherIndex/> */}
+<MouseMonitor/>
        </section>
     )
 }

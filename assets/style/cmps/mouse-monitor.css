@@ -1,0 +1,11 @@
+.mouse-monitor {
+    position: fixed;  
+    bottom: 20px;     
+    right: 20px;      
+    background: rgba(0, 0, 0, 0.8); 
+    color: white;  
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+    text-align: center;
+}

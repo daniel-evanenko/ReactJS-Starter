@@ -8,6 +8,8 @@
 @import 'cmps/watcher-list.css';
 @import 'cmps/watcher-modal.css';
 @import 'cmps/add-watcher-modal.css';
+@import 'cmps/mouse-monitor.css';
+
 /* Vars */
 :root {
 	--clr1: rgb(96, 107, 91);
@@ -88,6 +90,17 @@ button:hover {
 	background-color: var(--clr2);
 	color: white;
 	transition: 0.3s;
+}
+
+
+button:disabled {
+    cursor: not-allowed; 
+    opacity: 0.6; 
+}
+
+button:disabled:hover {
+    background-color: var(--clr2bg); 
+    color: inherit; 
 }
 
 input:focus {
