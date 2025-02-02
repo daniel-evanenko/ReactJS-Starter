@@ -1,0 +1,15 @@
+.watcher-modal {
+    position: absolute;
+    background-color: red;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+.watcher-info{
+    min-height: 150px;
+    min-width: 150px;
+}
+
+ul{
+    text-align: left;
+}

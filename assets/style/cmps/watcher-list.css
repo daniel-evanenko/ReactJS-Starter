@@ -1,0 +1,18 @@
+.watcher-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.watcher-div{
+    background-color: white;
+    padding: 10px;
+}
+
+.user-img{
+    width: 400px;
+    height: 400px;
+}

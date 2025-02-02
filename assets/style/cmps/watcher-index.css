@@ -1,0 +1,8 @@
+.watcher {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite; /* Your background color */
+    padding-block: 20px;
+}
