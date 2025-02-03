@@ -1,4 +1,4 @@
-import { WatcherModal } from './cmps/watcherModal.jsx';
+import { WatcherModal } from "./WatcherModal.jsx";
 const { useState } = React
 
 export function WatcherList({watchers,onRemove}){    
