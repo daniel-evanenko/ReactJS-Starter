@@ -17,13 +17,13 @@ export function Home() {
     return (
         <section className="home">
             <h2>Home Sweet Home</h2>
-          {/* <AnimalList animals={animalInfos}/> */}
-          {/* <SeasonClock/> */}
-          {/* <CountDown toTime={Date.now() + 1000*10} startFrom={10} onDone={()=>{
+          <AnimalList animals={animalInfos}/>
+          <SeasonClock/>
+          <CountDown toTime={Date.now() + 1000*10} startFrom={10} onDone={()=>{
             console.log('Done!')
-            }} /> */}
+            }} />
             <WatcherIndex/>
-{/* <MouseMonitor/> */}
+<MouseMonitor/>
        </section>
     )
 }

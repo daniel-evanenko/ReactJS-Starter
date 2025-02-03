@@ -1,23 +1,14 @@
-.count-down{
-    padding: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.count-down-outer{
     background-color: aqua;
     border: 5px solid blue;
-    width: 25%;
-    margin: auto;
-
+    padding: 5px;
 }
 
-.count-down-box{
+.count-down-inner{
     display: flex;
     justify-content: center;
     border: 3px solid blue;
-    width: 100%;
-
 }
-
 
 .warning{
     color: red;

@@ -7,6 +7,7 @@ export function CountDown({ startFrom, toTime, onDone }) {
     });
 
     const intervalRef = useRef(null); 
+    const warningClass = count <= 6 ? 'warning' : '';
 
     useEffect(() => {
         if (count <= 0) {
@@ -56,13 +57,15 @@ export function CountDown({ startFrom, toTime, onDone }) {
 
     }
 
-    const warningClass = count <= 6 ? 'warning' : '';
     
     return (
         <section className="count-down">
-            <div className="count-down-box">
+        <div className="count-down-outer">
+            <div className="count-down-inner">
                 <h2 className={warningClass}>{formatTime(count)}</h2>
             </div>
+        </div>
+
         </section>
     );
 }
