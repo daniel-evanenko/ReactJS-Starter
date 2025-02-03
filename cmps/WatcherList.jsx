@@ -1,4 +1,4 @@
-import { WatcherModal } from "./watcherModal.jsx";
+import { WatcherModal } from './cmps/watcherModal.jsx';
 const { useState } = React
 
 export function WatcherList({watchers,onRemove}){    
@@ -16,7 +16,7 @@ export function WatcherList({watchers,onRemove}){
         <section className="watcher-list">
         {watchers.map(watcher => (
         <div className="watcher-div"  key={watcher.id}>
-            <img className="user-img" src={`/assets/img/user.png`} alt={`user avatar`} />
+            <img className="user-img" src={`./assets/img/user.png`} alt={`user avatar`} />
             <h2>{watcher.fullname}</h2>
             <hr></hr>
             <div>
