@@ -46,6 +46,15 @@ export function AddWatcherModal({ modalRef, onSave }) {
         resetForm()
         modalRef.current.close()
     }
+
+    function onRemoveMovie(index) {
+        const updatedMovies = formData.movies.filter((_, i) => i !== index);
+        setFormData(prevFormData => ({ ...prevFormData, movies: updatedMovies }));
+    }
+    
+    function minAmountOfMovies(){
+        return formData.movies.length > 1 ? true : false
+    }
     return (
         <section className="add-watcher-modal">
              <dialog ref={modalRef} >
@@ -62,8 +71,8 @@ export function AddWatcherModal({ modalRef, onSave }) {
                 />
                 <label>Movies:</label>
                 {formData.movies.map((movie, index) => (
+                    <div key={index}>
                     <input className="movie-input"
-                        key={index}
                         type="text"
                         name="movies"
                         value={movie}
@@ -71,9 +80,12 @@ export function AddWatcherModal({ modalRef, onSave }) {
                         placeholder={`Movie ${index + 1}`}
                         required
                     />
+                    <button type="button" disabled={!minAmountOfMovies()}  onClick={()=>onRemoveMovie(index)}>X</button>
+                    </div>
+
                 ))}
                 <button type="button" onClick={onAddMovie}>+ Add Movie</button>
-                <div>                
+                <div className="buttons-container">                
                 <button type="submit">Save Watcher</button>
                 <button type="button" onClick={onCancelModal}>Cancel</button>
                 </div>

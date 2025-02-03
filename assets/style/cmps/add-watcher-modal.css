@@ -1,10 +1,24 @@
 form{
-display: flex;
-flex-direction: column;
-}
-
-input, label{
-  margin-block: 0.25rem;
-}
-
-
+  display: flex;
+  flex-direction: column;
+  }
+  
+  input, label{
+    margin-block: 0.25rem;
+  }
+  
+  input{
+    border-radius: 4px;
+    padding: 0.4em 0.5em;
+    border: solid 1px gray;
+  }
+  
+  
+  .buttons-container {
+    display: flex;
+    gap: 5px; 
+  }
+  
+  .buttons-container button {
+    flex: 1; 
+  }

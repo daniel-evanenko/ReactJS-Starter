@@ -22,8 +22,8 @@ export function Home() {
           {/* <CountDown toTime={Date.now() + 1000*10} startFrom={10} onDone={()=>{
             console.log('Done!')
             }} /> */}
-            {/* <WatcherIndex/> */}
-<MouseMonitor/>
+            <WatcherIndex/>
+{/* <MouseMonitor/> */}
        </section>
     )
 }
