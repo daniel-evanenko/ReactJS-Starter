@@ -39,7 +39,7 @@ export function CountDown({ startFrom, toTime, onDone }) {
     }, []);
 
     function playSound() {
-        const audio = new Audio('/assets/sound/alarm.mp3'); 
+        const audio = new Audio('./assets/sound/alarm.mp3'); 
         audio.play().catch(err => console.error("Audio play failed:", err));
     }
 
