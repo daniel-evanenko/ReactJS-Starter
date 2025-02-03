@@ -48,7 +48,7 @@ export function SeasonClock() {
     return (
         <section onClick={onToggleDark} className={`season-clock ${darkClass}`}>
             <h2>{season} ({month})</h2>
-            <img src={`https://github.com/daniel-evanenko/ReactJS-Starter/main/assets/img/${season}.png`} alt={`${season} season`} />
+            <img src={`./assets/img/${season}.png`} alt={`${season} season`} />
             <h2>{day}</h2>
             <h2>{time}</h2>
         </section>
